@@ -1,0 +1,40 @@
+.header {
+  padding-top: 11px;
+  margin-bottom: 40px;
+  @include md-block {
+    padding-top: 31px;
+    margin-bottom: 82px;
+  }
+}
+
+.header__container {
+  @include md-block {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  display: flex;
+  @include size(12);
+  align-items: center;
+  svg {
+    margin-right: 20px;
+  }
+}
+
+.header__logo-descr {
+  color: $c-white-0;
+  @include md-block {
+    margin: 0;
+    font-size: rem-calc(26);
+    line-height: rem-calc(34);
+    width: 255px;
+  }
+}
+
+.header__links {
+  @include md-block {
+    display: flex;
+  }
+}
