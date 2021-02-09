@@ -1,0 +1,14 @@
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.footer__descr {
+  color: #fff;
+  font-size: rem-calc(14);
+  line-height: rem-calc(16);
+}

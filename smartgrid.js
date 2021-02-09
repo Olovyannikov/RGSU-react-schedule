@@ -5,8 +5,8 @@ const options = {    outputStyle: 'scss',
     offset: '30px',
     mobileFirst: true,
     container: {
-        maxWidth: '1350px',
-        fields: '35px'
+        maxWidth: '1370px',
+        fields: '20px'
     },
     breakPoints: {
         lg: {
@@ -14,7 +14,7 @@ const options = {    outputStyle: 'scss',
         },
         md: {
             width: '992px',
-            fields: '0px'
+            fields: '10px'
         },
         sm: {
             width: '720px'

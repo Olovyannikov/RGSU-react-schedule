@@ -10,6 +10,7 @@
 @import "blocks/header/header";
 @import "blocks/main/card/card";
 
+@import "blocks/footer/footer";
 
 @mixin debug($background, $outline){
   height: 100vh;
