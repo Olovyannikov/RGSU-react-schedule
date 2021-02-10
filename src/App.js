@@ -1,16 +1,26 @@
 import './assets/scss/index.scss';
-import Header from "./components/Header";
-import Students from "./components/Students";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import Card from "./components/Students/Card";
+import Footer from "./components/Footer/Footer";
+import Chatbots from "./components/Chatbots/Chatbots";
+import {Route, BrowserRouter} from "react-router-dom";
 
 const App = () => {
     return (
-
-        <div>
+        <BrowserRouter>
             <Header/>
-            <Students/>
+            <main className='main'>
+                <section className={`main__card card`}>
+                    <div className={`card__container container`}>
+                        <div className={`card__stack`}>
+                            <Route exact path="/" component={Card}/>
+                            <Route path="/helpers" component={Chatbots}/>
+                        </div>
+                    </div>
+                </section>
+            </main>
             <Footer/>
-        </div>
+        </BrowserRouter>
     );
 }
 

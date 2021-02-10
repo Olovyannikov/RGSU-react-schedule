@@ -1,0 +1,138 @@
+.tableWrap {
+  background-color: #fff;
+  padding: 2rem 2rem;
+  color: #000;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  margin:0;
+  padding:0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table tr {
+  border: 1px solid #f1f4f9;
+  padding: 5px;
+}
+
+table th, table td {
+  border-right: 1px solid #f1f4f9;
+  font-size: rem-calc(20);
+  line-height: rem-calc(26);
+}
+
+thead tr {
+  border: none;
+}
+
+table th {
+  color: #444;
+  background-color: #fff;
+  text-align: left;
+  font-weight: 500;
+  font-size: rem-calc(22);
+  line-height: rem-calc(26);
+  padding-left: calc(47px - 21px);
+  border: none;
+  padding-bottom: 25px;
+  padding-top: 31px;
+}
+
+.table__divider {
+  border: none;
+  background: #f1f4f9;
+  color: #c3cad6;
+  font-size: rem-calc(22);
+  line-height: rem-calc(26);
+  text-align: center;
+  td {
+    padding-top: 17px;
+    padding-bottom: 18px;
+  }
+}
+
+@media (min-width: 996px) {
+  td {
+    padding-top: 37px;
+    padding-bottom: 40px;
+  }
+
+  td[data-label="Время"] {
+    white-space: nowrap;
+    color: #3464E0;
+    font-weight: 500;
+    padding-left: 26px;
+    padding-right: 20px;
+  }
+
+  td[data-label="Аудитория"] {
+    white-space: nowrap;
+    padding-left: 20px;
+    padding-right: 67px;
+  }
+
+  td[data-label="Тип занятия"] {
+    padding-left: 31px;
+    padding-right: 60px;
+  }
+
+  td[data-label="Дисциплина"] {
+    padding: 24px 62px 27px 38px;
+    max-width: 474px;
+  }
+
+  td[data-label="Преподаватель"] {
+    padding-left: 27px;
+  }
+}
+
+.table__teacher {
+  color: #c3cad6;
+  display: block;
+}
+
+.table__auditory {
+  display: flex;
+  svg {
+    margin-left: 5px;
+    fill: #c3cad6;
+  }
+}
+
+@media (max-width: 996px) {
+  table {
+    border: 0;
+  }
+  table thead {
+    display: none;
+  }
+  table tr {
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+  }
+  table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px dotted #ccc;
+    border-right: 1px solid transparent;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .table__divider {
+    td {
+      text-align: center;
+    }
+  }
+}

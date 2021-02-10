@@ -1,0 +1,36 @@
+.card__search {
+  position: relative;
+  max-width: 1136px;
+  margin: 0 auto 76px;
+
+  svg {
+    position: absolute;
+    right: 30px;
+    top: 28px;
+    fill: #c3cad6;
+  }
+}
+
+.card__input {
+  background: #FFFFFF;
+  border: 1px solid #E4ECFA;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  padding-left: 20px;
+  font-size: rem-calc(20);
+  line-height: rem-calc(26);
+  margin: 0 auto;
+  width: 95%;
+  display: block;
+  &::placeholder {
+    color: #c3cad6;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+}
+
+
