@@ -14,7 +14,7 @@ const Header = () => {
                     <p className={s.header__logoDescr}>Расписание учебных занятий университета</p>
                 </div>
                 <nav className={s.header__links}>
-                    <NavLink to="/" className={`${s.header__link} btn btn--active`}>Онлайн расписание</NavLink>
+                    <NavLink to="/" exact className={`${s.header__link} btn`}>Онлайн расписание</NavLink>
                     <NavLink to="/helpers" className={`${s.header__link} btn `}>Чат боты</NavLink>
                     <NavLink to="/instructions" className={`${s.header__link} btn`}>Инструкции</NavLink>
                 </nav>

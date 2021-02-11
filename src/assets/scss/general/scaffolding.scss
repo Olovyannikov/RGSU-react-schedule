@@ -170,7 +170,7 @@ input:hover {
       border: 1px solid #1740AA;
 
       &:hover {
-        color: darken(#fff,10%);
+        color: darken(#fff, 10%);
         background: darken(#1740AA, 10%);
         border: 1px solid darken(#1740AA, 10%);
       }
@@ -178,14 +178,14 @@ input:hover {
   }
 
 
-
-  &--active {
+  &.active {
     color: #fff;
     background: #1740AA;
     border: 1px solid #1740AA;
 
     &:hover {
-      border: 1px solid #fff;
+      border: 1px solid transparent;
     }
   }
 }
+
