@@ -1,4 +1,5 @@
 import s from './Header.module.scss';
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
@@ -13,9 +14,9 @@ const Header = () => {
                     <p className={s.header__logoDescr}>Расписание учебных занятий университета</p>
                 </div>
                 <nav className={s.header__links}>
-                    <a href="/" className={`${s.header__link} btn btn--active`}>Онлайн расписание</a>
-                    <a href="/helpers" className={`${s.header__link} btn `}>Чат боты</a>
-                    <a href="/instructions" className={`${s.header__link} btn`}>Инструкции</a>
+                    <NavLink to="/" className={`${s.header__link} btn btn--active`}>Онлайн расписание</NavLink>
+                    <NavLink to="/helpers" className={`${s.header__link} btn `}>Чат боты</NavLink>
+                    <NavLink to="/instructions" className={`${s.header__link} btn`}>Инструкции</NavLink>
                 </nav>
             </div>
         </header>
