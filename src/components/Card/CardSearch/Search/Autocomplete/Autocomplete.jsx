@@ -5,7 +5,7 @@ import React from 'react';
 const Autocomplete = ({suggestions, placeholder}) => {
     const [inputValue, setInputValue] = React.useState("");
     const [filteredSuggestions, setFilteredSuggestions] = React.useState([]);
-    const [selectedSuggestion, setSelectedSuggestion] = React.useState(0);
+    const [selectedSuggestion, setSelectedSuggestion] = React.useState();
     const [displaySuggestions, setDisplaySuggestions] = React.useState(false);
 
     const onChange = event => {
@@ -27,11 +27,10 @@ const Autocomplete = ({suggestions, placeholder}) => {
         setDisplaySuggestions(false);
     };
 
-
     return (
         <>
             <input autoComplete='off' id="searchInput" type="text" className={`${s.card__input}`}
-                   placeholder={placeholder} onChange={onChange} value={inputValue[0]}/>
+                   placeholder={placeholder} onChange={onChange} value={(inputValue)}/>
             <Dropdown
                 inputValue={inputValue}
                 selectedSuggestion={selectedSuggestion}
