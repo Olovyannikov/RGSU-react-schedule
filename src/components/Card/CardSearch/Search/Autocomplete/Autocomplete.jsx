@@ -42,6 +42,6 @@ const Autocomplete = ({suggestions, placeholder}) => {
             />
         </>
     );
-}
+};
 
 export default Autocomplete;
