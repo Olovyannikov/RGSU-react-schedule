@@ -1,6 +1,7 @@
 import Dropdown from "../Dropdown/Dropdown";
 import s from "../CardSearch.module.scss";
 import React from 'react';
+import searchLogo from "../../../../../assets/img/icons/search.svg";
 
 const Autocomplete = ({suggestions, placeholder}) => {
     const [inputValue, setInputValue] = React.useState("");
@@ -12,7 +13,7 @@ const Autocomplete = ({suggestions, placeholder}) => {
         const value = event.target.value;
         setInputValue(value);
 
-        const filteredSuggestions = suggestions.filter(suggestion =>
+        const filteredSuggestions = suggestions.map(Object.values).filter(suggestion =>
             suggestion[0].toLowerCase().includes(value.toLowerCase()) ||
             suggestion[1].toLowerCase().includes(value.toLowerCase())
         ).slice(0, 3);
@@ -27,10 +28,11 @@ const Autocomplete = ({suggestions, placeholder}) => {
         setDisplaySuggestions(false);
     };
 
+
     return (
         <>
-            <input autoComplete='off' id="searchInput" type="text" className={`${s.card__input}`}
-                   placeholder={placeholder} onChange={onChange} value={(inputValue)}/>
+            <input style={{background: `url(${searchLogo}) no-repeat 96% center`}} autoComplete='off' id="searchInput" type="text" className={`${s.card__input}`}
+                   placeholder={placeholder} onChange={onChange} value={(inputValue)} />
             <Dropdown
                 inputValue={inputValue}
                 selectedSuggestion={selectedSuggestion}

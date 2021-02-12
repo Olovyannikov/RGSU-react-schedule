@@ -1,4 +1,6 @@
 import s from './Chatbots.module.scss';
+import iphone from '../../assets/img/iphone.png';
+import oneplus from '../../assets/img/oneplus.png';
 
 const Chatbots = () => {
     return (
@@ -53,12 +55,13 @@ const Chatbots = () => {
                     </div>
                 </li>
             </ul>
-            <div className={s.honor}>
-                <img src="../../assets/img/oneplus.png" alt=""/>
-            </div>
             <div className={s.iphone}>
-                <img src="/assets/img/iphone.png" alt=""/>
+                <img src={iphone} alt=""/>
             </div>
+            <div className={s.honor}>
+                <img src={oneplus} alt=""/>
+            </div>
+
         </div>
     );
 }

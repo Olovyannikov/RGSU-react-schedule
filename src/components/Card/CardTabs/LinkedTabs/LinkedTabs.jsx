@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
-import "./LinkedTabs.module.scss";
+import s from "./LinkedTabs.module.scss";
 
 function LinkedTabs({ children, defaultTab, route }) {
     const queryTabExist = children.find(
@@ -19,8 +19,8 @@ function LinkedTabs({ children, defaultTab, route }) {
             onClick={_ => handleActiveTab(child.props.label)}
             className={
                 child.props.label === activeTab
-                    ? ["tabs__tab", "tabs__tab-active"].join(" ")
-                    : "tabs__tab"
+                    ? [`${s.tabs__tab}`, `${s.tabs__tab_active}`].join(" ")
+                    : `${s.tabs__tab}`
             }
             key={child.props.label}
         >
@@ -29,10 +29,14 @@ function LinkedTabs({ children, defaultTab, route }) {
     ));
     const tabContent = children.filter(child => child.props.label === activeTab);
     return (
-        <div>
-            <div className="tabs__box">{tabs}</div>
-            <div>{tabContent}</div>
-        </div>
+        <>
+            <div className={`${s.tabs__box}`}>
+                <div className={`${s.tabs__wrapper}`}>
+                    {tabs}
+                </div>
+            </div>
+            <div className={`${s.tabs__content}`}>{tabContent}</div>
+        </>
     );
 }
 

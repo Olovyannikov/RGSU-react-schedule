@@ -1,18 +1,38 @@
-
 import {LinkedTabs, Tab} from "../LinkedTabs/LinkedTabs";
+import Autocomplete from "../../CardSearch/Search/Autocomplete/Autocomplete";
+
+const suggestions = [
+    {group: "А-СОЦ-00.08-Д-2019-1", faculty: "Факультет управления"},
+    {group: "А-ИВТ-13.11-Д-2019-1", faculty: "Факультет информационных технологий"},
+    {group: "А-СОЦ-00.04-Д-2019-1", faculty: "Факультет социологии"},
+    {group: "А-ИСТ-00.02-Д-2019-1", faculty: "Гуманитарый факультет"},
+    {group: "ЖУР-Б-0-Д-2017-1", faculty: "Факультет коммуникативного менеджмента"},
+    {group: "ЮСТ-Б-0-В-2019-1", faculty: "Юридический факультет"},
+    {group: "Колледж РГСУ", faculty: "Колледж РГСУ"},
+    {group: "Колледж ПТУ", faculty: "Колледж ПТУ"},
+];
+
+const teachersList = [
+    {teacher: "Козырь А. А.", graduate: "Магистр Джедай"},
+    {teacher: "Оловянников И. В.", graduate: "Фронтенд-мастер"},
+    {teacher: "Храмов С. В.", graduate: "Мистер бэк"},
+];
+
+const students = "Начните вводить название своей группы";
+const teachers = "Начните вводить свое имя";
 
 const CardTabs = (props) => {
     return (
         <LinkedTabs route={''}>
             <Tab label={"students"} tabName={"Расписание занятий"}>
-                <p>Upcoming events goes here</p>
+                <Autocomplete placeholder={students} suggestions={suggestions}/>
             </Tab>
             <Tab label={"sensei"} tabName={"Расписание преподавателей"}>
-                <p>Your past events</p>
+                <Autocomplete placeholder={teachers} suggestions={teachersList}/>
             </Tab>
             <Tab label={"traffic"} tabName={"Загруженость аудиторий"}>
-            <p>Your past events</p>
-        </Tab>
+                <p>Your past events</p>
+            </Tab>
         </LinkedTabs>
     );
 }
