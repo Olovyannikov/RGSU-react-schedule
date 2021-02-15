@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import s from "./LinkedTabs.module.scss";
 
-function LinkedTabs({ children, defaultTab, route }) {
+function LinkedTabs({ children, defaultTab, route, dataValue }) {
     const queryTabExist = children.find(
         child => child.props.label === defaultTab
     );
@@ -15,14 +15,15 @@ function LinkedTabs({ children, defaultTab, route }) {
 
     const tabs = children.map(child => (
         <Link
-            to={`/${route}?tabs=${child.props.label}`}
+            to={`/${route}?tabs=${child.props.label.split(' ')[0]}`}
             onClick={_ => handleActiveTab(child.props.label)}
             className={
                 child.props.label === activeTab
                     ? [`${s.tabs__tab}`, `${s.tabs__tab_active}`].join(" ")
                     : `${s.tabs__tab}`
             }
-            key={child.props.label}
+            key={(child.props.label).split(' ')[0]}
+            data-value={(child.props.label).split(' ')[0]}
         >
             {child.props.tabName}
         </Link>

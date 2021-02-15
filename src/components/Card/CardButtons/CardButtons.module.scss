@@ -1,0 +1,21 @@
+.buttonsWrapper {
+  margin-top: 76px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnWeeks {
+  font-family: inherit;
+  color: #c3cad6;
+  cursor: pointer;
+  background: #F1F4F9;
+  border: none;
+  border-radius: 50px;
+  padding: 11px 25px 7px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.btnWeeks_active {
+  background: #1740AA;
+}

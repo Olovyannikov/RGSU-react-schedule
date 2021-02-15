@@ -7,7 +7,7 @@ const Card = () => {
             <CardTabs/>
             <CardTable/>
         </>
-)
-}
+    )
+};
 
 export default Card;

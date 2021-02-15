@@ -31,40 +31,6 @@ const CardTable = () => {
                             <span className={s.table__teacher}> к.соц.н. </span>
                         </td>
                     </tr>
-                    <tr>
-                        <td data-label="Время">8:30 - 10:00</td>
-                        <td data-label="Аудитория"><a href={"#"}>ВП8-404</a></td>
-                        <td data-label="Тип занятия">Лекция</td>
-                        <td data-label="Дисциплина">Управление государственными и муниципальными
-                            услугами и заказами
-                        </td>
-                        <td data-label={"Преподаватель"}>Рябова Татьяна Михайловна
-                            <span className={s.table__teacher}> к.соц.н.</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Время">8:30 - 10:00</td>
-                        <td data-label="Аудитория"><a href={"#"}>ВП8-404</a></td>
-                        <td data-label="Тип занятия">Лекция</td>
-                        <td data-label="Дисциплина">Управление государственными и муниципальными
-                            услугами и заказами
-                        </td>
-                        <td data-label={"Преподаватель"}>Рябова Татьяна Михайловна
-                            <span className={s.table__teacher}> к.соц.н.</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td data-label="Время">8:30 - 10:00</td>
-                        <td data-label="Аудитория"><a href={"#"}>ВП8-404</a></td>
-                        <td data-label="Тип занятия">Лекция</td>
-                        <td data-label="Дисциплина">Управление государственными и муниципальными
-                            услугами
-                            и заказами
-                        </td>
-                        <td data-label={"Преподаватель"}>Рябова Татьяна Михайловна
-                            <span className={s.table__teacher}> к.соц.н.</span>
-                        </td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
