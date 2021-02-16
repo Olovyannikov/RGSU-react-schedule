@@ -1,6 +1,6 @@
 import s from './CardButtons.module.scss';
-import {LinkedTabs, Tab} from '../CardTabs/LinkedTabs/LinkedTabs';
-
+import React, { useState, useCallback } from "react";
+import {Tab, Tabs} from "../CardTabs/CardWeeks/CardWeeks";
 
 let date = new Date();
 
@@ -37,14 +37,16 @@ function today() {
 let dateArray = Object.values(getWeeksInMonth(date.getMonth(), date.getFullYear()));
 
 const dateItem = dateArray.map((item, id) =>
-    <button data-label={today()} className={s.btnWeeks}> {`${item.start} - ${item.end}`}</button>
+    <Tab tabName={`${item.start} - ${item.end}`} label={`${item.start} - ${item.end}`}>
+
+    </Tab>
 );
 
 const CardButtons = (props) => {
     return (
-        <div className={s.buttonsWrapper}>
+        <Tabs>
             {dateItem}
-        </div>
+        </Tabs>
     )
 };
 
