@@ -4,6 +4,9 @@ import CardButtons from "../../CardButtons/CardButtons";
 import s from "../../CardButtons/CardButtons.module.scss";
 import React from "react";
 
+import CardTable from "../../CardTable/Table/CardTable";
+
+
 const suggestions = [
     {group: "А-СОЦ-00.08-Д-2019-1", faculty: "Факультет управления"},
     {group: "А-ИВТ-13.11-Д-2019-1", faculty: "Факультет информационных технологий"},
@@ -21,6 +24,8 @@ const teachersList = [
     {teacher: "Храмов С. В.", graduate: "Мистер бэк"},
 ];
 
+
+
 const students = "Начните вводить название своей группы";
 const teachers = "Начните вводить свое имя";
 
@@ -29,7 +34,7 @@ const CardTabs = (props) => {
         <LinkedTabs route={''}>
             <Tab label={"students"} tabName={"Расписание занятий"}>
                 <Autocomplete placeholder={students} suggestions={suggestions}/>
-                <CardButtons/>
+                <CardButtons table={<CardTable />}/>
             </Tab>
             <Tab label={"sensei"} tabName={"Расписание преподавателей"}>
                 <Autocomplete placeholder={teachers} suggestions={teachersList}/>

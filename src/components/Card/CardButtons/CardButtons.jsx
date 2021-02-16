@@ -36,13 +36,14 @@ function today() {
 
 let dateArray = Object.values(getWeeksInMonth(date.getMonth(), date.getFullYear()));
 
-const dateItem = dateArray.map((item, id) =>
-    <Tab tabName={`${item.start} - ${item.end}`} label={`${item.start} - ${item.end}`}>
 
-    </Tab>
-);
 
 const CardButtons = (props) => {
+    const dateItem = dateArray.map((item, id) =>
+        <Tab tabName={`${item.start} - ${item.end}`} label={`${item.start} - ${item.end}`}>
+            {props.table}
+        </Tab>
+    );
     return (
         <Tabs>
             {dateItem}

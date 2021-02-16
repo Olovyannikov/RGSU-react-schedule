@@ -1,6 +1,17 @@
 import s from "./CardTable.module.scss";
 
-const CardTable = () => {
+
+
+const CardTable = (props) => {
+     props = {
+         teacher: 'BALABA',
+         teacherJob: 'Darth',
+         time: '8:30 - 10:00',
+         type: 'Лекция',
+         discipline: 'Захват мира по протоколу',
+         auditory: 'Death Star'
+     }
+
     return (
         <>
             <div className={`${s.schedule__tableWrapper} ${s.tableWrap}`}>
@@ -21,14 +32,13 @@ const CardTable = () => {
                         <td colSpan={5} className={s.table__dividerCell}>22.03.2020 Понедельник</td>
                     </tr>
                     <tr>
-                        <td data-label="Время">8:30 - 10:00</td>
-                        <td data-label="Аудитория"><a href={"#"}>ВП8-404</a></td>
-                        <td data-label="Тип занятия">Лекция</td>
-                        <td data-label="Дисциплина">Управление государственными и муниципальными
-                            услугами и заказами
+                        <td data-label="Время">{props.time}</td>
+                        <td data-label="Аудитория"><a href={"#"}>{props.auditory}</a></td>
+                        <td data-label="Тип занятия">{props.type}</td>
+                        <td data-label="Дисциплина">{props.discipline}
                         </td>
-                        <td data-label={"Преподаватель"}>Рябова Татьяна Михайловна
-                            <span className={s.table__teacher}> к.соц.н. </span>
+                        <td data-label={"Преподаватель"}>{props.teacher}
+                            <span className={s.table__teacher}> {props.teacherJob} </span>
                         </td>
                     </tr>
                     </tbody>
