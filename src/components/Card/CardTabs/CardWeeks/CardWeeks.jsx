@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-
+import s from './CardWeeks.module.scss';
 function Tabs({ children }) {
     const [activeTab, setActiveTab] = useState(children[0].props.label);
     const handleActiveTab = useCallback(label => setActiveTab(label), []);
@@ -12,8 +12,8 @@ function Tabs({ children }) {
             }}
             className={
                 child.props.label === activeTab
-                    ? ["tabs__tab", "tabs__tab-active"].join(" ")
-                    : "tabs__tab"
+                    ? [`${s.tabs__tab}`, `${s.tabs__tab_active}`].join(" ")
+                    : `${s.tabs__tab}`
             }
             key={child.props.label}
         >
@@ -22,10 +22,10 @@ function Tabs({ children }) {
     ));
     const tabContent = children.filter(child => child.props.label === activeTab);
     return (
-        <div>
-            <div className="tabs__box">{tabs}</div>
-            <div>{tabContent}</div>
-        </div>
+        <>
+            <div className={`${s.tabs__box}`}>{tabs}</div>
+            <>{tabContent}</>
+        </>
     );
 }
 
