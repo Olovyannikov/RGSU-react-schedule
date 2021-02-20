@@ -24,7 +24,36 @@ const teachersList = [
     {teacher: "Храмов С. В.", graduate: "Мистер бэк"},
 ];
 
+const dataTable = [
+        {
+            teacher: 'BALABA',
+            teacherJob: 'Darth',
+            time: '8:30 - 10:00',
+            type: 'Лекция',
+            discipline: 'Захват мира по протоколу',
+            auditory: 'Death Star',
+            date: '01.04.2021'
+        },
+        {
+            teacher: 'LOL',
+            teacherJob: 'Emperor',
+            time: '8:30 - 10:00',
+            type: 'Практика',
+            discipline: 'Захват Явин VI',
+            auditory: 'Явин VI',
+            date: '08.04.2021'
+        }
+    ]
+;
 
+const dataTeachers = {
+    teacher: 'ЮСТ-Б-2-В-2017 (ИП)',
+    teacherJob: 'к.соц.н.',
+    time: '8:30 - 10:00',
+    type: 'Лекция',
+    discipline: 'Приготовление омлета',
+    auditory: 'ВП8-404'
+}
 
 const students = "Начните вводить название своей группы";
 const teachers = "Начните вводить свое имя";
@@ -34,11 +63,11 @@ const CardTabs = (props) => {
         <LinkedTabs route={''}>
             <Tab label={"students"} tabName={"Расписание занятий"}>
                 <Autocomplete placeholder={students} suggestions={suggestions}/>
-                <CardButtons table={<CardTable />}/>
+                <CardButtons table={<CardTable props={dataTable[0]}/>}/>
             </Tab>
             <Tab label={"sensei"} tabName={"Расписание преподавателей"}>
                 <Autocomplete placeholder={teachers} suggestions={teachersList}/>
-                {/*<CardButtons/>*/}
+                <CardButtons table={<CardTable props={dataTeachers}/>}/>
             </Tab>
             <Tab label={"traffic"} tabName={"Загруженость аудиторий"}>
                 <p>Your past events</p>

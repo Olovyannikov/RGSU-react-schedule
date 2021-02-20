@@ -6,16 +6,16 @@
 
 .card__title {
   font-weight: 400;
-  font-size: rem-calc(26);
-  line-height: rem-calc(26);
+  font-size: 26px;
+  line-height: 26px;
   color: #444;
   margin: 0 0 14px;
 }
 
 .card__descr {
   margin: 0 0 38px;
-  font-size: rem-calc(18);
-  line-height: rem-calc(26);
+  font-size: 18px;
+  line-height: 26px;
   color: #c3cad6;
 }
 
@@ -44,17 +44,26 @@
   }
 }
 
+.card_calendar {
+  position: relative;
+}
+
+.card_calendar_icon {
+  position: absolute;
+  left: 16.5px;
+}
+
 .card__itemTitle {
   color: #444;
-  font-size: rem-calc(20);
-  line-height: rem-calc(26);
+  font-size: 20px;
+  line-height: 26px;
   margin: 0 0 1px;
 }
 
 .card__itemDescr {
   margin: 0;
-  font-size: rem-calc(18);
-  line-height: rem-calc(26);
+  font-size: 18px;
+  line-height: 26px;
   color: #c3cad6;
 }
 
@@ -68,4 +77,11 @@
   position: absolute;
   right: 66px;
   top: 70px;
+}
+
+.phone {
+  display: none;
+  @media (min-width: 1200px) {
+    display: block;
+  }
 }

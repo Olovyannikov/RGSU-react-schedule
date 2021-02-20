@@ -1,16 +1,7 @@
 import s from "./CardTable.module.scss";
 
 
-const CardTable = (props) => {
-    props = {
-        teacher: 'BALABA',
-        teacherJob: 'Darth',
-        time: '8:30 - 10:00',
-        type: 'Лекция',
-        discipline: 'Захват мира по протоколу',
-        auditory: 'Death Star'
-    }
-
+const CardTable = ({props}) => {
     return (
         <>
             <div className={`${s.schedule__tableWrapper} ${s.tableWrap}`}>

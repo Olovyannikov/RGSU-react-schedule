@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import s from "./LinkedTabs.module.scss";
 
-function LinkedTabs({ children, defaultTab, route, dataValue }) {
+function LinkedTabs({ children, defaultTab, route}) {
     const queryTabExist = children.find(
         child => child.props.label === defaultTab
     );

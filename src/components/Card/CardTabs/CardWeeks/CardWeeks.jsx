@@ -16,6 +16,7 @@ function Tabs({ children }) {
                     : `${s.tabs__tab}`
             }
             key={child.props.label}
+            data-date={child.props.date}
         >
             {child.props.tabName}
         </button>

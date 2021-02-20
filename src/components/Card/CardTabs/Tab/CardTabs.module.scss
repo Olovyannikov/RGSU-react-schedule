@@ -33,16 +33,16 @@
   border-bottom: 2px solid transparent;
   color: #c3cad6;
   display: block;
-  font-size: rem-calc(14);
-  line-height: rem-calc(20);
+  font-size: 14px;
+  line-height: 20px;
   position: relative;
   padding-top: 12px;
   padding-bottom: 26px;
   text-align: center;
 
   @media (min-width: 768px) {
-    font-size: rem-calc(18);
-    line-height: rem-calc(26);
+    font-size: 18px;
+    line-height: 26px;
     text-align: left;
     padding: 12px 52px 26px 85px;
   }
