@@ -34,10 +34,34 @@
   padding-top: 12px;
   padding-bottom: 26px;
   text-align: center;
+  svg {
+    transition: .2s;
+    position: absolute;
+    left: 28.84px;
+    top: 12px;
+    fill: #c3cad6;
+  }
 
   &:hover {
     border-bottom: 2px solid #f1f4f9;
+    svg {
+      fill: #444;
+    }
   }
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background: #f1f4f9;
+    left: 16px;
+    top: 0;
+  }
+
+
 
   @media (min-width: 768px) {
     margin-right: 39px;
@@ -55,9 +79,17 @@
   &_active {
     color: #3464E0 !important;
     border-bottom: 2px solid #3464E0;
-
+    &::before {
+      background: #3464E0;
+    }
+    svg {
+      fill: #fff;
+    }
     &:hover {
       border-bottom: 2px solid #3464E0;
+      svg {
+        fill: #fff;
+      }
     }
   }
 }

@@ -14,7 +14,7 @@ const App = () => {
                     <div className={`card__container container`}>
                         <div className={`card__stack`}>
                             <Route exact path="/" render={props => <Card {...props} />} />
-                            <Route path="/helpers" component={Chatbots}/>
+                            <Route path="/helpers" render={props => <Chatbots {...props}/>}/>
                         </div>
                     </div>
                 </section>

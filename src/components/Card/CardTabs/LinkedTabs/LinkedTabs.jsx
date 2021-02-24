@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import s from "./LinkedTabs.module.scss";
 
-function LinkedTabs({ children, defaultTab, route}) {
+function LinkedTabs({ children, defaultTab, route, svg}) {
     const queryTabExist = children.find(
         child => child.props.label === defaultTab
     );
@@ -26,6 +26,7 @@ function LinkedTabs({ children, defaultTab, route}) {
             data-value={(child.props.label).split(' ')[0]}
         >
             {child.props.tabName}
+            {child.props.svg}
         </Link>
     ));
     const tabContent = children.filter(child => child.props.label === activeTab);

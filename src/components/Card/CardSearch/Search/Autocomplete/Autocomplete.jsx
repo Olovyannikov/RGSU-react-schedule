@@ -31,7 +31,7 @@ const Autocomplete = ({suggestions, placeholder}) => {
 
     return (
         <>
-            <input style={{background: `url(${searchLogo}) no-repeat 96% center; `}} autoComplete='off' id="searchInput" type="text" className={`${s.card__input}`}
+            <input style={{background: `url(${searchLogo}) no-repeat 96% center `}} autoComplete='off' id="searchInput" type="text" className={`${s.card__input}`}
                    placeholder={placeholder} onChange={onChange} value={(inputValue)} />
             <Dropdown
                 inputValue={inputValue}
