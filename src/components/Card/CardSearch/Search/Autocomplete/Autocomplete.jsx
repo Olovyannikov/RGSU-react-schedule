@@ -3,7 +3,7 @@ import s from "../CardSearch.module.scss";
 import React from 'react';
 import searchLogo from "../../../../../assets/img/icons/search.svg";
 
-const Autocomplete = ({suggestions, placeholder}) => {
+const Autocomplete = ({suggestions, placeholder, props}) => {
     const [inputValue, setInputValue] = React.useState("");
     const [filteredSuggestions, setFilteredSuggestions] = React.useState([]);
     const [selectedSuggestion, setSelectedSuggestion] = React.useState();
@@ -21,6 +21,7 @@ const Autocomplete = ({suggestions, placeholder}) => {
         setFilteredSuggestions(filteredSuggestions);
         setDisplaySuggestions(true);
     };
+
     const onSelectSuggestion = index => {
         setSelectedSuggestion(index);
         setInputValue(filteredSuggestions[index]);
@@ -28,11 +29,11 @@ const Autocomplete = ({suggestions, placeholder}) => {
         setDisplaySuggestions(false);
     };
 
-
     return (
         <>
-            <input style={{background: `url(${searchLogo}) no-repeat 96% center `}} autoComplete='off' id="searchInput" type="text" className={`${s.card__input}`}
-                   placeholder={placeholder} onChange={onChange} value={(inputValue)} />
+            <input style={{background: `url(${searchLogo}) no-repeat 96% center `}} autoComplete='off' id="searchInput"
+                   type="text" className={`${s.card__input}`}
+                   placeholder={placeholder} onChange={onChange} value={inputValue}/>
             <Dropdown
                 inputValue={inputValue}
                 selectedSuggestion={selectedSuggestion}
@@ -42,6 +43,6 @@ const Autocomplete = ({suggestions, placeholder}) => {
             />
         </>
     );
-};
+}
 
 export default Autocomplete;

@@ -1,60 +1,12 @@
 import s from "./CardTable.module.scss";
 
-const data = {
-    days: [
-        {
-            date: '01.04.2021',
-            db: [
-                {
-                    teacher: 'LOL',
-                    teacherJob: 'Emperor',
-                    time: '8:30 - 10:00',
-                    type: 'YYT',
-                    discipline: 'Захват Явин VI',
-                    auditory: 'Явин VI',
-                },
-                {
-                    teacher: '123',
-                    teacherJob: 'Emperor',
-                    time: '8:30 - 10:00',
-                    type: 'Практика',
-                    discipline: 'Захват Явин VI',
-                    auditory: 'Явин VI',
-                }
-            ]
-        },
-        {
-            date: '02.04.2021',
-            db: [
-                {
-                    teacher: 'Татьяна Иванова',
-                    teacherJob: 'Emperor',
-                    time: '8:30 - 10:00',
-                    type: 'Практика',
-                    discipline: 'Захват Явин VI',
-                    auditory: 'Явин VI',
-                },
-                {
-                    teacher: 'LOL',
-                    teacherJob: 'Emperor',
-                    time: '8:30 - 10:00',
-                    type: 'Практика',
-                    discipline: 'Захват Явин VI',
-                    auditory: 'Явин VI',
-                }
-            ]
-        }
-    ]
-}
+const renderTableData = ({props}) => {
 
-//renderTable
-
-const renderTableData = () => {
-    return data.days.map((day, index) => {
+    return props.days.map((day, index) => {
         const {date, db} = day
         return (
             <>
-                <tr className={s.table__divider}>
+                <tr key={`${db.teacher} + ${db.length}`} className={s.table__divider}>
                     <td colSpan={5}>{date}</td>
                 </tr>
                 {db.map((database, i) => (
@@ -67,19 +19,17 @@ const renderTableData = () => {
                             className={s.table__teacher}>{database.teacherJob}</span></td>
                     </tr>
                 ))}
-
             </>
         )
     })
 }
-
-const CardTable = () => {
+const CardTable = (props) => {
     return (
         <>
             <div className={`${s.schedule__tableWrapper} ${s.tableWrap}`}>
                 <table style={{paddingBottom: '29px'}}>
                     <thead>
-                    <tr>
+                    <tr >
                         <th>Время</th>
                         <th className={s.table__auditory}>Аудитория
                             <svg width={24} height={24} viewBox="0 0 24 24" id="pin" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +43,7 @@ const CardTable = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    {renderTableData()}
+                        {renderTableData(props)}
                     </tbody>
                 </table>
             </div>

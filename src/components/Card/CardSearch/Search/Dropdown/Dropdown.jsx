@@ -6,7 +6,7 @@ const Dropdown = props => {
         inputValue,
         onSelectSuggestion,
         displaySuggestions,
-        selectedSuggestion
+        selectedSuggestion,
     } = props;
 
     if (inputValue && displaySuggestions) {
@@ -22,7 +22,7 @@ const Dropdown = props => {
                                 className={classname}
                                 onClick={() => onSelectSuggestion(index)}
                             >
-                                <span className={s.groupName}>{suggestion[0]}</span>
+                                <span className={s.groupName}>{suggestion[0]} </span>
                                 <span className={s.groupFaculty}>{suggestion[1]}</span>
                             </li>
                         );
