@@ -11,7 +11,8 @@ const CardTabs = (props) => {
         <LinkedTabs route={''}>
             <Tab key={"Расписание занятий"} label={"students"} tabName={"Расписание занятий"} svg={calendarIcon()}>
                 <Autocomplete placeholder={props.students} suggestions={props.suggestions}/>
-                <CardButtons table={<CardTable props={props.data}/>}/>
+                 <CardButtons  table={<CardTable props={props.data}/>}/>
+
             </Tab>
             <Tab key={"Расписание преподавателей"} label={"sensei"} tabName={"Расписание преподавателей"}  svg={userIcon()}>
                 <Autocomplete placeholder={props.teachers} suggestions={props.teachersList}/>

@@ -27,6 +27,7 @@ const Autocomplete = ({suggestions, placeholder, props}) => {
         setInputValue(filteredSuggestions[index]);
         setFilteredSuggestions([]);
         setDisplaySuggestions(false);
+
     };
 
     return (
